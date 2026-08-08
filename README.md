@@ -16,3 +16,12 @@ The code in this repository represents my own solutions and learning progress.
 ## Progress
 
 Currently working through the book and adding new challenges as I complete them.
+
+## DISCLAIMER
+
+Some challenges are designed in the book to be built off each other therefore I will miss numbers in the folders to demonstrate this
+
+### `Part-1-Basics`
+
+- 006 (includes 007)
+- 014 (includes 015)
