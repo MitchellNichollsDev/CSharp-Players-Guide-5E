@@ -659,7 +659,7 @@ Console.WriteLine(string.Join(", ", theMiddle));
 //Console.WriteLine(currentSmallest);
 
 
-/* Finds the average of the array, iterating each index to add the value to the total. When complete, total is converted to float divided by the length of the array for the average*/
+/* FINDS THE AVERAGE OF THE ARRAY, ITERATING EACH INDEX TO ADD THE VALUE TO THE TOTAL. WHEN COMPLETE, TOTAL IS CONVERTED TO FLOAT DIVIDED BY THE LENGTH OF THE ARRAY FOR THE AVERAGE*/
 //int[] array = new int[] { 4, 51, -7, 13, -99, 15, -8, 45, 90 };
 
 //int total = 0;
@@ -670,10 +670,174 @@ Console.WriteLine(string.Join(", ", theMiddle));
 //Console.WriteLine(average);
 
 
-int[] scores = new int[10];
+//int[] scores = new int[10];
 
-foreach (int score in scores)
+//foreach (int score in scores)
+//{
+//    Console.WriteLine(score);
+//}
+
+/* CREATES AN ARRAY IN AN ARRAY */
+//int[][] matrix = new int[3][];
+//matrix[0] = new int[] { 1, 2 };
+//matrix[1] = new int[] { 3, 4 };
+//matrix[2] = new int[] { 5, 6 };
+
+//Console.WriteLine(matrix[0][1]); // Prints 2 in the console
+
+/* MULTI-DIMENSIONAL/RECTANGULAR ARRAY - , IN THE [] INDICATES MULTIPLE DIMENSIONS AND THE INDICES (NUMBERS) IN THE [] INDICATE THE SIZE OF THE ARRAYS (3 FOR THE AMOUNT OF ARRAYS, 2 FOR THE LENGTH OF THE ARRAYS)  */
+//int[,] matrix = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+//Console.WriteLine(matrix[0, 1]);
+
+/* LOOP/ITERATE THROUGH EACH ELEMENT IN THE MULTI-DIMENSION ARRAY USING .GETLENGTH(0) REPRESENTING ROW AND .GETLENGTH(1) REPRESENTING COLUMN OF THE ARRAY */
+//int[,] matrix = new int[4, 4];
+
+//for (int row = 0; row < matrix.GetLength(0); row++)
+//{
+//	for (int column = 0; column < matrix.GetLength(1); column++)
+//		Console.Write(matrix[row, column] + " ");
+
+//	Console.WriteLine();
+//}
+#endregion
+
+#region *********** Level 13 - METHODS *******************
+//CountToTen();
+//CountToTen();
+
+
+//void CountToTen()
+//{
+//	for (int current = 1; current <= 10; current++)
+//	{
+//		Console.WriteLine(current);
+//	}
+//}
+
+
+//int current = Convert.ToInt32(Console.ReadLine());
+//CountToTen();
+//CountToTwenty();
+
+//void CountToTen()
+//{
+//    for (int current = 1; current <= 10; current++)
+//        Console.WriteLine(current);
+//}
+
+
+//void CountToTwenty()
+//{
+//    for (int current = 1; current <= 20; current++)
+//        Console.WriteLine(current);
+//}
+
+/* Error: Trying to access text variable in a method and doesn't possess the value the user defines producing a blank */
+//string text = Console.ReadLine();
+
+//void DisplayText()
+//{
+//    Console.WriteLine(text);
+//}
+
+
+/* DEFININING COUNT FUNCTION AND CALLING WITH 20 AS THE ARGUMENT */
+//Count(20);
+//void Count(int numberToCountTo)
+//{
+//	for (int current = 1; current <= numberToCountTo; current++)
+//		Console.WriteLine(current);
+//}
+//int number = 10;
+//Count(number);	// Calling the function using a variable value
+
+
+/* DEFINING A FUNCTION USING 2 ARGUMENTS AND HOW TO CALL IT */
+//void CountBetween(int start, int end)
+//{
+//	for (int current = start; current <= end; current++)
+//		Console.WriteLine(current);
+//}
+
+//CountBetween(20, 30);
+
+//Console.Write("How high should I count? ");
+//int chosenNumber = ReadNumber();
+//Count(chosenNumber);
+
+//void Count(int numberToCountTo)
+//{
+//    for (int current = 1; current <= numberToCountTo; current++)
+//        Console.WriteLine(current);
+//}
+
+//int ReadNumber()
+//{
+//    string input = Console.ReadLine();
+//    int number = Convert.ToInt32(input);
+//    return number;
+//}
+
+
+/* EMPTY STRING RETURNS TO THE START OF THE WHILE LOOP, ANY VALUE ENTERED BREAKS THE WHILE LOOP EARLY */
+//GetUserName();
+//string GetUserName()
+//{
+//    while(true)
+//    {
+//        Console.Write("What is your name? ");
+//        string name = Console.ReadLine();
+//        if (name != "")
+//            return name;
+//        Console.WriteLine("Let's try that again.");
+//    }
+//}
+
+//Count(20);
+//void Count(int numberToCountTo)
+//{
+//    if (numberToCountTo < 1)
+//        return;
+
+//    for (int index = 1; index <= numberToCountTo; index++)
+//        Console.WriteLine(index);
+//}
+
+/* SAME RESULT FROM USING CURLY BRACES AND RETURN (BLOCK/STATEMENT BODY) AS USING THE ARROW (=>) OPERATOR (EXPRESSION BODY) IN THIS CONTEXT 
+ USE BLOCK/STATEMENT BODY WITH ONE OR MANY STATEMENTS
+ USE EXPRESSION BODY WHEN USING A SINGLE EXPRESSION */
+//int DoubleAndAddOne(int value)
+//{
+//    return value * 2 + 1;
+//}
+
+//int DoubleAndAddOne(int value) => value * 2 + 1;
+
+//DoubleAndAddOne(4);
+
+
+
+
+/* XML DOCUMENTATION COMMENTS MUST BE CALLED WHEN CODE IS IN A CLASS */
+
+/// <summary>
+/// Counts to the given number, starting at 1 and including the number provided.
+/// </summary>
+/// <param name="message"></param>
+//void PrintTwice(string message)
+//{
+//    Console.WriteLine(message);
+//    Console.WriteLine(message);
+//}
+
+//PrintTwice("Howdy");
+
+
+Console.WriteLine(Factorial(3));
+int Factorial(int number)
 {
-    Console.WriteLine(score);
+    if (number == 1) return 1;
+    return number * Factorial(number - 1);
 }
+
 #endregion
